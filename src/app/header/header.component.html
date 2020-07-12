@@ -23,12 +23,15 @@
     <!-- <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword" [value]="counter"
       (input)="counter = $event.target.value"> -->
 
-    <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword" [(ngModel)]="counter">
+    <!-- <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword" [(ngModel)]="counter"> -->
+    <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword" [(ngModel)]="keyword">
 
     <!-- <button class="btn btn-sm btn-primary" (click)="counter = counter + 1"> -->
     <button class="btn btn-sm btn-primary" (click)="buttonClick($event)">
       <i class="ion-search"></i>
     </button>
     {{ this.counter }}
+
+    <span class="highlight" *ngIf="keyword === ''">請輸入查詢條件</span>
   </div>
 </nav>
