@@ -7,6 +7,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { TagsComponent } from './tags/tags.component';
 
+import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +19,8 @@ import { TagsComponent } from './tags/tags.component';
     TagsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
