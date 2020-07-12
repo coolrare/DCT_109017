@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ArticlesComponent } from './articles/articles.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-basic20200721';
+  title = 'conduit';
+  subtitle = 'A place to share your <u>knowledge</u>.';
 }
