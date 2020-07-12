@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   counter = 0;
   keyword = '';
+  isHighlight = false;
+  fontSize = 30;
 
   constructor() {}
 
@@ -20,12 +22,15 @@ export class HeaderComponent implements OnInit {
     this.counter = +this.counter + 1;
     // }
     console.log(event);
+    this.isHighlight = !this.isHighlight;
+    this.fontSize += 2;
   }
 
   keywordInput(event: InputEvent){
     // console.log(event);
     this.counter = +(event.target as HTMLInputElement).value;
     // console.log(event.target );
+
   }
 
 }
