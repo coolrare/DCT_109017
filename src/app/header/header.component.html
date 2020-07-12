@@ -32,6 +32,24 @@
     </button>
     {{ this.counter }}
 
-    <span class="highlight" *ngIf="keyword === ''">請輸入查詢條件</span>
+    <!-- <span [hidden]="keyword !== ''" class="highlight">請輸入查詢條件</span> -->
+    <!-- <span class="highlight" *ngIf="keyword === ''">請輸入查詢條件</span> -->
+    <!-- <span class="highlight" *ngIf="keyword !== ''">輸入的內容為 {{ keyword }}</span> -->
+    <!-- <span class="highlight">{{ keyword === '' ? '請輸入查詢條件' : '輸入的內容為' + keyword}}</span> -->
+
+    <!-- <span class="highlight" *ngIf="keyword === '';else hasKeyword">請輸入查詢條件</span> -->
+
+    <span class="highlight">
+      <ng-container *ngIf="keyword === ''; then noKeyword; else hasKeyword"></ng-container>
+    </span>
+
+    <ng-template #noKeyword>
+      請輸入查詢條件
+    </ng-template>
+
+    <ng-template #hasKeyword>
+      輸入的內容為 {{ keyword }}
+    </ng-template>
+
   </div>
 </nav>

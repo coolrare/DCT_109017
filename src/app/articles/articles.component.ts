@@ -70,4 +70,5 @@ export class ArticlesComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
 }
