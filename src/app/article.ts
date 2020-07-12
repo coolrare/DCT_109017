@@ -11,9 +11,15 @@ export interface Article {
   favoritesCount: number;
 }
 
+export interface ArticleAPI {
+  articles: Article[];
+  articlesCount: number;
+}
+
 interface Author {
   username: string;
   bio: string;
   image: string;
   following: boolean;
 }
+
